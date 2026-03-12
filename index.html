@@ -1,57 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>ASTRAMON</title>
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<title>TSUK PEARL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial;
+background:#f8fafc;
+color:#1e293b;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#0f172a;
+color:white;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
+letter-spacing:2px;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#7c3aed;
+}
+
+/* HERO */
+
+.hero{
+height:500px;
+background-image:url("https://images.unsplash.com/photo-1611085583191-a3b181a88401");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+.hero button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+background:#7c3aed;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 60px;
+text-align:center;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:40px;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+.categoria{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* PRODUCTOS */
+
+.productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.producto{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.producto:hover{
+transform:scale(1.05);
+}
+
+.producto img{
+width:100%;
+border-radius:10px;
+}
+
+.producto h3{
+margin:10px 0;
+}
+
+.producto button{
+padding:10px 20px;
+background:#7c3aed;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+justify-content:center;
+}
+
+.about img{
+width:350px;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0f172a;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>ASTRAMON 🔥💦🌱</h1>
+<header>
 
-<section id="seleccionar-astral">
-    <h2>Elige tu Astral:</h2>
+<div class="logo">TSUK PEARL</div>
 
-    <label><input type="radio" name="astral" id="ignisoul"> Ignisoul 🔥</label>
-    <label><input type="radio" name="astral" id="hydrion"> Hydrion 💦</label>
-    <label><input type="radio" name="astral" id="sylvion"> Sylvion 🌱</label>
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Colecciones</a>
+<a href="#">Japonesas</a>
+<a href="#">Coreanas</a>
+<a href="#">Contacto</a>
+</nav>
 
-    <button id="boton-astral">Seleccionar</button>
+</header>
+
+<section class="hero">
+
+<h1>TSUK PEARL</h1>
+<p>Elegancia japonesa y coreana en cada joya</p>
+<button>Ver Colección</button>
+
 </section>
 
-<section id="seleccionar-ataque">
-    <h2>Elige tu ataque:</h2>
+<section class="section">
 
-    <p>Tu Astral <span id="astral-jugador"></span> tiene <span id="vidas-jugador">100</span> vidas</p>
-    <p>El Astral enemigo <span id="astral-enemigo"></span> tiene <span id="vidas-enemigo">100</span> vidas</p>
-    <p>Energía jugador ⚡ <span id="energia-jugador">50</span></p>
-    <p>Energía enemigo ⚡ <span id="energia-enemigo">50</span></p>
+<h2>Nuestras Colecciones</h2>
 
+<div class="categorias">
 
-    <!-- ATAQUES FUEGO -->
-    <div id="ataques-fuego">
-        <button onclick="atacar('🔥 Fénix Shot')">🔥 Fénix Shot</button>
-        <button onclick="atacar('🔥 Astra Burn')">🔥 Astra Burn</button>
-        <button onclick="atacar('🔥 Nova Pyra')">🔥 Nova Pyra</button>
-    </div>
+<div class="categoria">
+<h3>💍 Anillos</h3>
+<p>Diseños minimalistas inspirados en Asia.</p>
+</div>
 
-    <!-- ATAQUES AGUA -->
-    <div id="ataques-agua">
-        <button onclick="atacar('💦 Aqua Jet')">💦 Aqua Jet</button>
-        <button onclick="atacar('💦 Aqua Orbit')">💦 Aqua Orbit</button>
-        <button onclick="atacar('💦 Cosmo Splash')">💦 Cosmo Splash</button>
-    </div>
+<div class="categoria">
+<h3>📿 Collares</h3>
+<p>Joyas delicadas con perlas elegantes.</p>
+</div>
 
-    <!-- ATAQUES PLANTA -->
-    <div id="ataques-planta">
-        <button onclick="atacar('🌱 Flor Nexus')">🌱 Flor Nexus</button>
-        <button onclick="atacar('🌱 Gaia Spark')">🌱 Gaia Spark</button>
-        <button onclick="atacar('🌱 Bloom Rift')">🌱 Bloom Rift</button>
-    </div>
+<div class="categoria">
+<h3>✨ Pulseras</h3>
+<p>Estilo coreano moderno.</p>
+</div>
+
+<div class="categoria">
+<h3>👑 Edición Premium</h3>
+<p>Piezas exclusivas japonesas.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="mensajes"></section>
+<section class="section">
+
+<h2>Joyas Destacadas</h2>
+
+<div class="productos">
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1605106702734-205df224ecce">
+<h3>Collar Pearl Sakura</h3>
+<p>$25</p>
+<button>Comprar</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
+<h3>Anillo Lunar</h3>
+<p>$18</p>
+<button>Comprar</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
+<h3>Pulsera Pearl</h3>
+<p>$22</p>
+<button>Comprar</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1588444650700-6e7c46e77f45">
+<h3>Collar Elegance</h3>
+<p>$30</p>
+<button>Comprar</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="section about">
+
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a5e02">
+
+<div>
+
+<h2>Nuestra Historia</h2>
+
+<p>
+TSUK PEARL nace con la inspiración de la elegancia japonesa y coreana,
+mezclando el minimalismo oriental con diseños modernos que resaltan la
+belleza y delicadeza de cada joya.
+</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>© 2026 TSUK PEARL</p>
+<p>Instagram | TikTok | Facebook</p>
+
+</footer>
 
 </body>
 </html>
