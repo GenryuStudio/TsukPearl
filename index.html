@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ASTRAMON</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1>ASTRAMON 🔥💦🌱</h1>
+
+<section id="seleccionar-astral">
+    <h2>Elige tu Astral:</h2>
+
+    <label><input type="radio" name="astral" id="ignisoul"> Ignisoul 🔥</label>
+    <label><input type="radio" name="astral" id="hydrion"> Hydrion 💦</label>
+    <label><input type="radio" name="astral" id="sylvion"> Sylvion 🌱</label>
+
+    <button id="boton-astral">Seleccionar</button>
+</section>
+
+<section id="seleccionar-ataque">
+    <h2>Elige tu ataque:</h2>
+
+    <p>Tu Astral <span id="astral-jugador"></span> tiene <span id="vidas-jugador">100</span> vidas</p>
+    <p>El Astral enemigo <span id="astral-enemigo"></span> tiene <span id="vidas-enemigo">100</span> vidas</p>
+    <p>Energía jugador ⚡ <span id="energia-jugador">50</span></p>
+    <p>Energía enemigo ⚡ <span id="energia-enemigo">50</span></p>
+
+
+    <!-- ATAQUES FUEGO -->
+    <div id="ataques-fuego">
+        <button onclick="atacar('🔥 Fénix Shot')">🔥 Fénix Shot</button>
+        <button onclick="atacar('🔥 Astra Burn')">🔥 Astra Burn</button>
+        <button onclick="atacar('🔥 Nova Pyra')">🔥 Nova Pyra</button>
+    </div>
+
+    <!-- ATAQUES AGUA -->
+    <div id="ataques-agua">
+        <button onclick="atacar('💦 Aqua Jet')">💦 Aqua Jet</button>
+        <button onclick="atacar('💦 Aqua Orbit')">💦 Aqua Orbit</button>
+        <button onclick="atacar('💦 Cosmo Splash')">💦 Cosmo Splash</button>
+    </div>
+
+    <!-- ATAQUES PLANTA -->
+    <div id="ataques-planta">
+        <button onclick="atacar('🌱 Flor Nexus')">🌱 Flor Nexus</button>
+        <button onclick="atacar('🌱 Gaia Spark')">🌱 Gaia Spark</button>
+        <button onclick="atacar('🌱 Bloom Rift')">🌱 Bloom Rift</button>
+    </div>
+</section>
+
+<section id="mensajes"></section>
+
+</body>
+</html>
